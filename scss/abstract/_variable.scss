@@ -1,0 +1,33 @@
+@font-face {
+  font-family: googleSans;
+  src: url("../assets/font/ProductSans-Medium.ttf");
+}
+
+$white: white;
+$light_gray: hsl(0, 0, 96);
+$dot_gray: hsl(0, 0, 90);
+$dot_active: hsl(225, 24, 29);
+$black: hsl(215, 20, 16);
+$deep_black: hsl(202, 0, 3);
+$black_shadow: hsla(0, 0, 0, 6%);
+$gray: hsl(220, 7, 44);
+$purple: hsl(250, 61, 67);
+$white_purple: hsla(254, 74, 91, 20%);
+$light_purple: hsl(283, 50, 79);
+$purple_gray: hsl(245, 11, 56);
+$blue: hsl(203, 74, 63);
+$blue_gray: hsl(233, 16, 44);
+$dark_blue: hsl(234, 51, 16);
+$deep_blue: hsl(241, 45, 21);
+$deep_blue_overlay: hsla(241, 45, 21, 70%);
+$orange: hsl(10, 69, 60);
+$orange_shadow: hsla(10, 69, 60, 30%);
+$yellow: hsl(41, 99, 47);
+$yellow_shadow: hsla(41, 99, 47, 15%);
+$gold: hsl(45, 87, 53);
+$orange_payment: hsl(14, 88, 56);
+$turquoise: hsl(194, 100, 25);
+
+$purple_gradient: linear-gradient(201deg, hsl(236, 79, 70), hsl(253, 73, 56));
+$orange_gradient: linear-gradient(180deg, hsl(16, 100, 71), hsl(8, 100, 70));
+$insta_gradient: conic-gradient(from 180deg at 50% 50%, hsl(213, 67, 83) 0deg, hsl(341, 80, 74) 60deg, hsl(275, 77, 74) 106.09deg, hsl(295, 61, 62) 153.75deg, hsl(286, 74, 65) 221.25deg, hsl(236, 47, 83) 258.75deg, hsl(28, 100, 80) 288.75deg, hsl(92, 16, 82) 315deg, hsl(216, 66, 84) 334.13deg, hsl(106, 14, 82) 358.97deg, hsla(0, 0%, 100%, 0) 360deg);

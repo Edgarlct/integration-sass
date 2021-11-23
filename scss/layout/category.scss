@@ -1,0 +1,35 @@
+.sectionName{
+  grid-column: 1/-1;
+  p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+}
+
+.category{
+  @include grid(4);
+  @include xl{
+    @include grid(2);
+  }
+  @include s{
+    @include grid(1);
+  }
+
+  .plusShape{
+    position: absolute;
+    right: 2%;
+    @include xl{
+      right: -10px;
+    }
+    @include s{
+      width: 15%;
+      z-index: -1;
+    }
+    @include xxs{
+      width: 25%;
+      z-index: -1;
+    }
+  }
+}

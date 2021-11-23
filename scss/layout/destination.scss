@@ -1,0 +1,70 @@
+.destinations{
+  @include grid(3);
+  @include l{
+    @include grid(2);
+  }
+  @include s{
+    @include grid(1);
+  }
+}
+
+.destinationCard{
+  position: relative;
+  display: flex;
+  filter: drop-shadow(0 40px 50px $black_shadow);
+  >img{
+    border-radius: 24px 24px 26px 26px;
+    max-width: 100%;
+  }
+  @include l{
+    &:last-of-type{
+      grid-column: 1/-1;
+    }
+  }
+  @include xxs{
+    width: 100%;
+  }
+  .information{
+    position: absolute;
+    bottom: 0;
+    height: 130px;
+    width: 100%;
+    background-color: $white;
+    border-radius: 0 0 24px 24px;
+    padding: 0 20px;
+
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    >div{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    i{
+      color: $deep_black;
+
+      span{
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 16px;
+        color: $blue_gray;
+        margin-left: 14px;
+      }
+    }
+  }
+
+  .decoreDestination{
+    position: absolute;
+    transform: translate(60%);
+    z-index: -1;
+    right: 0;
+    bottom: 50px;
+
+    @include xxs{
+      width: 30%;
+    }
+  }
+}

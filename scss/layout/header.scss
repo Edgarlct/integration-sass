@@ -1,0 +1,129 @@
+.backgroundShape{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.circleBackground{
+  width: 479px;
+  height: 479px;
+  border-radius: 50%;
+  background-color: $light_purple;
+  transform: translate(-100%);
+  position: absolute;
+  left: 60px;
+  top: 60px;
+  opacity: 30%;
+  filter: blur(150px);
+}
+
+.hero{
+  display: flex;
+  align-items: center;
+  height: 764px;
+  position: relative;
+  margin-top: 20px;
+
+  @include m{
+    height: 620px;
+  }
+  @include xs{
+    height: auto;
+  }
+
+  >img{
+    position: absolute;
+    right: -50px;
+    @include l{
+      width: 70%;
+    }
+    @include  s{
+      width: 60%;
+    }
+    @include  xs{
+      display: none;
+    }
+  }
+}
+
+.textLeft{
+  width: 50%;
+  @include s{
+    width: 60%;
+  }
+  @include xs{
+    width: 100%;
+  }
+  p{
+    line-height: 30px;
+    &:first-of-type{
+      color: $orange;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+  }
+
+  h1{
+    font-size: 84px;
+    line-height: 89px;
+    margin-bottom: 30px;
+    span{
+      position: relative;
+      img{
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-45%);
+
+        @include s{
+          bottom: 12px;
+        }
+      }
+    }
+    @include m{
+      font-size: 48px;
+      line-height: 70px;
+      span{
+        img{
+          width: 140%;
+        }
+      }
+    }
+  }
+
+  .link{
+    margin-top: 34px;
+    display: flex;
+    align-items: center;
+    @include xxs{
+      flex-direction: column;
+      gap: 20px;
+    }
+    a:last-of-type{
+      display: flex;
+      align-items: center;
+      margin-left: 44px;
+      font-family: Poppins;
+      font-size: 17px;
+      font-weight: 500;
+      color: $gray;
+
+      @include xxs{
+        margin-left: 0;
+      }
+
+      div{
+        height: 52px;
+        width: 52px;
+        border-radius: 50%;
+        background-color: $orange;
+        filter: drop-shadow(0px 15px 30px $orange_shadow);
+        margin-right: 21px;
+        @include flex-center;
+        color: $white;
+      }
+    }
+  }
+}

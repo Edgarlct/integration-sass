@@ -1,0 +1,11 @@
+.button{
+  width: 170px;
+  height: 60px;
+  background-color: $yellow;
+  border-radius: 10px;
+  filter: drop-shadow(0px 20px 35px $yellow_shadow);
+  @include flex-center;
+  font-family: googleSans;
+  font-size: 18px;
+  color: $white;
+}

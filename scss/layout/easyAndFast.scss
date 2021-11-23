@@ -1,0 +1,234 @@
+.easyAndFast{
+  margin-top: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @include xl{
+    justify-content: unset;
+    gap: 30px;
+  }
+
+  @include l{
+    gap: 0;
+    .textLeft{
+      width: 55%;
+    }
+  }
+
+  @include m{
+    flex-direction: column;
+    align-items: start;
+    gap: 50px;
+  }
+
+  .sectionName{
+    p{
+      text-align: left;
+      color: $blue_gray;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    h2{
+      text-align: left;
+    }
+
+    margin-bottom: 30px;
+  }
+  .textLeft{
+    @include m{
+      width: 80%;
+    }
+    @include xxs{
+      width: 100%;
+    }
+    .step{
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 48px;
+
+      @include xxs{
+        width:95%;
+      }
+
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+
+      div:last-of-type{
+        width: 70%;
+      }
+
+      .bgIcon{
+        height: 48px;
+        width: 47px;
+        margin-right: 21px;
+        border-radius: 13px;
+        @include flex-center;
+      }
+      .gold{
+        background-color: $gold;
+      }
+      .orange{
+        background-color: $orange_payment;
+      }
+      .turquoise{
+        background-color: $turquoise;
+      }
+
+      p {
+        font-weight: 400;
+        line-height: 20px;
+        &:first-of-type {
+          font-weight: 700;
+          font-size: 16px;
+          color: $blue_gray;
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+  .tripCard{
+    width: 370px;
+    height: 400px;
+    @include l{
+      width: 35%;
+      height: fit-content;
+    }
+    @include m{
+      width: unset;
+      margin: auto;
+    }
+    @include xxs{
+      width: 100%;
+      margin: auto;
+    }
+
+    background-color: $white;
+    border-radius: 26px;
+    box-shadow: 0 40px 50px $black_shadow;
+    padding: 20px 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: $purple_gray;
+
+    .circleShape{
+      width: 354px;
+      height: 367px;
+      border-radius: 50%;
+      opacity: 40%;
+      background-color: $blue;
+      filter: blur(150px);
+      position: absolute;
+      z-index: -1;
+      top: -60px;
+      right: -40px;
+    }
+
+    >img{
+      &:first-of-type{
+        border-radius: 24px;
+      }
+    }
+
+    .icon{
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 30px;
+      .circleBgIcon{
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        background-color: $light_gray;
+        @include flex-center;
+        margin-right: 16px;
+      }
+    }
+
+    .name{
+      font-size: 18px;
+      line-height: 23px;
+      color: $deep_black;
+      margin-bottom: 13px;
+    }
+    >p{
+      margin-top: 26px;
+    }
+    .date{
+      display: flex;
+      margin-bottom: 21px;
+      span{
+        height: 100%;
+        width: 2px;
+        margin: 0 8px;
+        background-color: $purple_gray;
+      }
+    }
+
+    .numberPeople{
+      display: flex;
+      position: relative;
+      img{
+        margin-right: 15px;
+
+        &:last-of-type{
+          margin-right: 0;
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  .tripComplete{
+    height: 129px;
+    width: 263px;
+    border-radius: 18px;
+    background-color: $white;
+    filter: drop-shadow(0 40px 50px $black_shadow);
+    padding: 16px 20px;
+    position: absolute;
+    bottom: 60px;
+    right: -120px;
+    @include xxs{
+      bottom: -110px;
+      right: 50%;
+      transform: translate(50%);
+    }
+    display: flex;
+    align-items: flex-start;
+
+    >img{
+      margin-right: 12px;
+    }
+
+    .name{
+      margin-top: 6px;
+      margin-bottom: 14px;
+    }
+    >div{
+      p{
+        font-size: 14px;
+        span{
+          color: $purple;
+        }
+      }
+    }
+    .chargeBar{
+      height: 5px;
+      width: 156px;
+      border-radius: 10px;
+      background-color: $light_gray;
+      margin-top: 10px;
+      >div{
+        width: 40%;
+        height: 100%;
+        background-color: $purple;
+        border-radius: 10px;
+      }
+    }
+  }
+}

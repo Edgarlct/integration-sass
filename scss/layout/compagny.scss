@@ -1,0 +1,38 @@
+.logoCompagny{
+  width: 100%;
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+  @include l{
+    margin-top: 180px;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+    gap: 16px;
+  }
+
+  >div{
+    height: 86px;
+    width: 240px;
+    border-radius: 10px;
+    background-color: $white;
+    @include flex-center;
+    transition: ease-in-out 0.5s;
+    img{
+      mix-blend-mode: luminosity;
+    }
+
+    &:hover{
+      filter: drop-shadow(0 40px 50px $black_shadow);
+      img{
+        mix-blend-mode: normal;
+      }
+    }
+
+    @include l{
+      filter: drop-shadow(0 40px 50px $black_shadow);
+      img{
+        mix-blend-mode: normal;
+      }
+    }
+  }
+}

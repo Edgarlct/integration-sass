@@ -1,0 +1,151 @@
+.testimonials{
+  height: 400px;
+  margin-top: 200px;
+  display: flex;
+
+  @include xl{
+    .textLeft{
+      width: 45%;
+    }
+  }
+  @include m{
+    .textLeft{
+      width: 80%;
+    }
+  }
+  @include m{
+    .textLeft{
+      width: 100%;
+    }
+  }
+
+  @include l{
+    margin-top: 100px;
+    flex-direction: column;
+    height: fit-content;
+    gap: 50px;
+  }
+
+  @include xxs{
+    margin-top: 200px;
+  }
+
+  .sectionName{
+    p{
+      text-align: left;
+      color: $blue_gray;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    h2{
+      text-align: left;
+      line-height: 64px;
+    }
+
+    margin-bottom: 30px;
+  }
+  .dotComment{
+    display: flex;
+    margin-top: 80px;
+    .dot{
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      background-color: $dot_gray;
+      margin-right: 25px;
+      cursor: pointer;
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+    .active{
+      background-color: $dot_active;
+    }
+  }
+
+  .commentSection{
+    position: relative;
+    height: fit-content;
+    @include l{
+      width: fit-content;
+      margin: auto;
+    }
+    .comment{
+      width: 504px;
+      height: 245px;
+      border-radius: 10px;
+      background-color: $white;
+      box-shadow: 0 40px 50px $black_shadow;
+      padding: 28px 34px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      @include xxs{
+        width: 100%;
+        height: fit-content;
+      }
+
+      img{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 0;
+        left: 0;
+
+        @include xxs{
+          width: 50px;
+        }
+      }
+    }
+    .textComment{
+      line-height: 32px;
+      margin-bottom: 34px;
+      width: 90%;
+    }
+
+    .nameComment{
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 27px;
+      margin-bottom: 5px;
+    }
+
+    .placeComment{
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    .secondeComment{
+      position: absolute;
+      z-index: -1;
+      outline: solid 2px $light_gray;
+      background-color: transparent;
+      bottom: -87px;
+      right: -48px;
+      box-shadow: none;
+      filter: drop-shadow(0 40px 50px $black_shadow);
+    }
+
+    .arrowSwitch{
+      position: absolute;
+      height: 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      bottom: 50px;
+      right: -30%;
+      @include xl{
+        right: -15%;
+      }
+      @include xxs{
+        right: 0;
+        bottom: 100px;
+      }
+
+      i{
+        cursor: pointer;
+      }
+    }
+  }
+}
